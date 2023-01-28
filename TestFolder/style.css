@@ -5,7 +5,7 @@
     background-color: skyblue;
     position: relative;
     margin: auto;
-    border:1px solid rgb(215, 4, 4);
+    border: 1px solid rgb(215, 4, 4);
     border-spacing: 0px;
 }
 
@@ -27,7 +27,7 @@
     margin: auto;
     text-align: center;
     vertical-align: middle;
-    border:1px solid rgb(215, 4, 4);
+    border: 1px solid rgb(215, 4, 4);
     border-spacing: 0px;
 }
 
@@ -57,4 +57,3 @@ p {
     text-align: center;
     vertical-align: middle;
 }
-
