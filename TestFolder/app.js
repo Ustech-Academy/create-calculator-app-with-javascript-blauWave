@@ -13,7 +13,7 @@ function calculate() {
         result = parseFloat(input1) * parseFloat(input2);
     } else if (operator == "divide") {
         result = parseFloat(input1) / parseFloat(input2);
-    }else if (operator == "power") {
+    } else if (operator == "power") {
         result = parseFloat(input1) ** parseFloat(input2);
     }
     else if (operator == "mod") {
@@ -22,57 +22,56 @@ function calculate() {
 
 
     document.getElementById("result").innerHTML = result;
-   
+
 
     //td elementlerini oluşturuyoruz
-    let value1=document.createElement("td");
-    let value2=document.createElement("td");
-    let operator2=document.createElement("td");
-    let value3=document.createElement("td");
+    let value1 = document.createElement("td");
+    let value2 = document.createElement("td");
+    let operator2 = document.createElement("td");
+    let value3 = document.createElement("td");
 
-    //yeni eklenen alanlar
-    let tSil = document.createElement("td"); 
-    let silBtn =document.createElement("button");
-    silBtn.textContent="Sil";
+    //sil butonu ekleme
+    let tSil = document.createElement("td");
+    let silBtn = document.createElement("button");
+    silBtn.textContent = "Sil";
     tSil.appendChild(silBtn); //butonu td içine ekliyoruz.
 
-    silBtn.onclick=function(e){
+    silBtn.onclick = function (e) {
         liste.removeChild(this.parentNode.parentNode);
     }
 
-    value1.textContent=document.getElementById("input1").value;//textboxtan değeri okuyup aktarıyoruz.
-    value2.textContent=document.getElementById("input2").value;//textboxtan değeri okuyup aktarıyoruz.
-    operator2.textContent=operator;
-    value3.textContent=result;
+    value1.textContent = document.getElementById("input1").value;//textboxtan değeri okuyup aktarıyoruz.
+    value2.textContent = document.getElementById("input2").value;//textboxtan değeri okuyup aktarıyoruz.
+    operator2.textContent = operator;
+    value3.textContent = result;
+
     //tr elementi oluşturuyoruz
-    let tr=document.createElement("tr");
- 
+    let tr = document.createElement("tr");
+
     //tdleri tr içine ekliyoruz
     tr.appendChild(value1);
     tr.appendChild(value2);
     tr.appendChild(operator2);
     tr.appendChild(value3);
-    tr.appendChild(tSil); //eklenen alan.
- 
+    tr.appendChild(tSil); //sil butonu.
+
 
     //tr elementini liste (tablo) içine ekliyoruz
     liste.appendChild(tr);
 
     //nenelerin için eklemeden sonra temizleyelim
-    ad.value="";
-    soyad.value="";
-    yas.value="";
+    ad.value = "";
+    soyad.value = "";
+    yas.value = "";
 
     //temizlemeden sonra ad içine odaklansın
     ad.focus();
- 
+
 }
-let a = document.getElementById("result").innerText;
-function ResetTheForm(form)
-{
-    if (confirm("Formu temizlemek istediğinize emin misiniz?"))
-    {
+
+function ResetTheForm(form) {
+    if (confirm("Formu temizlemek istediğinize emin misiniz?")) {
         form.reset();
-        
+
     }
 }
