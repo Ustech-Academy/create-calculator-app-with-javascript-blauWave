@@ -19,9 +19,11 @@
     width: 60px;
     height: 10px;
     padding: 10px;
-    background-color: darkorange;
+    background-color: rgb(128, 81, 168);
     position: relative;
     margin: auto;
+    text-align: center; 
+    vertical-align: middle;
 }
 
 
@@ -42,3 +44,8 @@ table{
     vertical-align: middle;
   }
 
+
+  p {
+    text-align: center; 
+    vertical-align: middle;
+  }
