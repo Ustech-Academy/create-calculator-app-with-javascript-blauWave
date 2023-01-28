@@ -16,6 +16,11 @@ function calculate() {
     }else if (operator == "power") {
         result = parseFloat(input1) ** parseFloat(input2);
     }
+    else if (operator == "mod") {
+        result = parseFloat(input1) % parseFloat(input2);
+    }
+
+
     document.getElementById("result").innerHTML = result;
    
 
